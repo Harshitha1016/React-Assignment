@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Welcome</h2>
+
+    <p id="welcomeUser"></p>
+
+    <button onclick="logout()">Logout</button>
+
+</div>
+
+<script>
+
+if(localStorage.getItem("loginStatus") != "true"){
+
+    window.location.href = "login.html";
+}
+
+document.getElementById("welcomeUser").innerHTML =
+"Hello, " + localStorage.getItem("username");
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
